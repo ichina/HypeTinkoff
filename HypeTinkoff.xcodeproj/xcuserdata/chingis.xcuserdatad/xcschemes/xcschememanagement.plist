@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>HypeTinkoff.xcscheme</key>
+		<key>HypeTinkoff.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -13,6 +13,51 @@
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
 		<key>B01BEBC21F60732C002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEBDB1F6086AE002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEBEB1F608815002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEBF31F608815002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC0E1F608858002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC161F608858002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC301F608868002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC381F608868002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC521F608871002BF11C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B01BEC5A1F608872002BF11C</key>
 		<dict>
 			<key>primary</key>
 			<true/>

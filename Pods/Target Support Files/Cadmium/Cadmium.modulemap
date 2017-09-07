@@ -1,0 +1,6 @@
+framework module Cadmium {
+  umbrella header "Cadmium-umbrella.h"
+
+  export *
+  module * { export * }
+}
