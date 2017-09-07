@@ -17,6 +17,18 @@ class StorageProvider<T: CoreDataRepresentable> {
     init(stack: CoreDataStack) {
         self.stack = stack
     }
+    
+    func save(object: T) -> Observable<Void> {
+        return Observable.create({ observer -> Disposable in
+            Cd.transact { () in
+                _ = object.asCDManagedObject()
+                observer.onNext()
+                observer.onCompleted()
+            }
+            return Disposables.create()
+        })
+    }
+
     func save(objects: [T]) -> Observable<Void> {
         return Observable.create({ observer -> Disposable in
             Cd.transact { () in
@@ -28,19 +40,8 @@ class StorageProvider<T: CoreDataRepresentable> {
         })
     }
     
-    func fetchObjects() -> Observable<[NewsItem]> {
-        do {
-            let arr = try Cd.objects(CDNews.self).fetch()
-            return Observable.just(arr.map{($0 as CDNews).asDomain()})
-        } catch let err {
-            return .error(err)
-        }
-    }
-    
-    func deleteObjects() -> Observable<Void> {
-        Cd.transact(serial: true) { () in
-            try? Cd.objects(CDNews.self).delete()
-        }
-        return .just()
-    }
+}
+
+enum StorageProviderError: Error {
+    case ObjectNotFound
 }

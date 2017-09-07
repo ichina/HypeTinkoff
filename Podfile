@@ -11,7 +11,6 @@ end
 
 def swinject
     pod 'Swinject'
-    pod 'SwinjectStoryboard'
 end
 
 def test_pods

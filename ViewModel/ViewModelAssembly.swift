@@ -16,6 +16,13 @@ public class ViewModelAssembly: Assembly {
         container.register(NewsViewModel.self) { r in
             let vm = NewsViewModel()
             vm.newsManager = r.resolve(Services.NewsManagerType.self)!
+            vm.router = r.resolve(Services.RouterType.self)!
+            return vm
+        }
+        
+        container.register(NewsContentViewModel.self) { (r: Resolver, arg: String) in
+            let vm = NewsContentViewModel(newsID: arg)
+            vm.newsManager = r.resolve(Services.NewsManagerType.self)!
             return vm
         }
     }

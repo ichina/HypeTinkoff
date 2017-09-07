@@ -15,10 +15,12 @@ class NewsTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         self.textLabel?.numberOfLines = 0;
-        self.selectionStyle = .none
+        self.selectionStyle = .gray
+        
     }
 
     func bind(_ viewModel:NewsItemViewModel) {
         self.textLabel?.text = viewModel.title
+        self.detailTextLabel?.text = viewModel.viewedCount
     }
 }

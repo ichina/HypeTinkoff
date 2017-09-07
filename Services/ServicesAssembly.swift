@@ -16,20 +16,23 @@ public class ServicesAssembly: Assembly {
         container.register(NewsManagerType.self) { r in
             let mng = NewsManager()
             mng.network = r.resolve(NetworkProvider.self)!.makeNewsNetwork()
-            mng.storage = r.resolve(StorageProvider.self)!
+            mng.storage = r.resolve(NewsStorageProvider.self)!
             return mng
         }
         
         container.register(NetworkProvider.self) { (r) in
             return NetworkProvider()
         }
-        
-        container.register(StorageProvider.self) { r in
-            return StorageProvider<NewsItem>(stack: r.resolve(CoreDataStack.self)!)
+
+        container.register(NewsStorageProvider.self) { r in
+            return NewsStorageProvider(stack: r.resolve(CoreDataStack.self)!)
         }
         container.register(CoreDataStack.self) { r in
             return CoreDataStack()
         }.inObjectScope(.container)
         
+        container.register(RouterType.self) { r in
+            return Router(resolver: r)
+        }
     }
 }

@@ -17,7 +17,6 @@ public class NewsController: UIViewController {
     
     public var viewModel: NewsViewModel!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var createPostButton: UIBarButtonItem!
     
     override public func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +33,12 @@ public class NewsController: UIViewController {
     private func bindViewModel() {
         assert(viewModel != nil)
         
+        let itemSelected:Observable<IndexPath> = tableView.rx.itemSelected.asObservable()
         let input = NewsViewModel.Input(
+            viewWillAppear: self.viewWillAppearDriver,
             refreshTrigger: self.refreshTrigger,
-            nextPageTrigger: self.nextPageTrigger
+            nextPageTrigger: self.nextPageTrigger,
+            itemSelected:itemSelected
         )
         
         let output = viewModel.transform(input: input)
@@ -58,17 +60,18 @@ public class NewsController: UIViewController {
             .disposed(by: disposeBag)
     }
     
-    var refreshTrigger: Driver<Void> {
-        let viewWillAppear = rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
+    var viewWillAppearDriver: Driver<Void> {
+        return rx.sentMessage(#selector(UIViewController.viewWillAppear(_:)))
             .mapToVoid()
-            .asDriverOnErrorJustComplete()
-        let pull = tableView.refreshControl!.rx
+            .asDriver(onErrorJustReturn: ())
+    }
+    var refreshTrigger: Driver<Void> {
+        return tableView.refreshControl!.rx
             .controlEvent(.valueChanged)
             .map{[weak self] () -> Bool in self?.tableView.refreshControl!.isRefreshing == true}
             .filter({$0 == true})
             .mapToVoid()
             .asDriver(onErrorJustReturn: ())
-        return Driver.merge(viewWillAppear, pull)
     }
     
     var nextPageTrigger: Driver<Void> {

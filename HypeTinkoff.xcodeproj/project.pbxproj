@@ -28,6 +28,11 @@
 		B00341EB1F60EF7800DA72D5 /* StorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341EA1F60EF7800DA72D5 /* StorageProvider.swift */; };
 		B00341ED1F60F0DB00DA72D5 /* CoreDataRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341EC1F60F0DB00DA72D5 /* CoreDataRepresentable.swift */; };
 		B00341EF1F60F1D700DA72D5 /* CDNews+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341EE1F60F1D700DA72D5 /* CDNews+Ext.swift */; };
+		B00341F31F61318500DA72D5 /* NewsContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341F21F61318500DA72D5 /* NewsContentController.swift */; };
+		B00341F51F6132B900DA72D5 /* NewsContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341F41F6132B900DA72D5 /* NewsContentViewModel.swift */; };
+		B00341F81F613C0200DA72D5 /* RouterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341F71F613C0200DA72D5 /* RouterType.swift */; };
+		B00341FA1F613C7300DA72D5 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = B00341F91F613C7300DA72D5 /* Router.swift */; };
+		B003420E1F61756700DA72D5 /* NewsStorageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B003420D1F61756700DA72D5 /* NewsStorageProvider.swift */; };
 		B01BEBC71F60732C002BF11C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01BEBC61F60732C002BF11C /* AppDelegate.swift */; };
 		B01BEBDF1F6086AE002BF11C /* HypeTinkoffTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B01BEBDE1F6086AE002BF11C /* HypeTinkoffTests.swift */; };
 		B01BEBF51F608815002BF11C /* View.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B01BEBEC1F608815002BF11C /* View.framework */; };
@@ -231,6 +236,11 @@
 		B00341EA1F60EF7800DA72D5 /* StorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StorageProvider.swift; sourceTree = "<group>"; };
 		B00341EC1F60F0DB00DA72D5 /* CoreDataRepresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoreDataRepresentable.swift; sourceTree = "<group>"; };
 		B00341EE1F60F1D700DA72D5 /* CDNews+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDNews+Ext.swift"; sourceTree = "<group>"; };
+		B00341F21F61318500DA72D5 /* NewsContentController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsContentController.swift; sourceTree = "<group>"; };
+		B00341F41F6132B900DA72D5 /* NewsContentViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsContentViewModel.swift; sourceTree = "<group>"; };
+		B00341F71F613C0200DA72D5 /* RouterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RouterType.swift; sourceTree = "<group>"; };
+		B00341F91F613C7300DA72D5 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		B003420D1F61756700DA72D5 /* NewsStorageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewsStorageProvider.swift; sourceTree = "<group>"; };
 		B01BEBC31F60732C002BF11C /* HypeTinkoff.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HypeTinkoff.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B01BEBC61F60732C002BF11C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B01BEBD21F60732C002BF11C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -458,6 +468,15 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
+		B00341F61F613BF800DA72D5 /* Routing */ = {
+			isa = PBXGroup;
+			children = (
+				B00341F71F613C0200DA72D5 /* RouterType.swift */,
+				B00341F91F613C7300DA72D5 /* Router.swift */,
+			);
+			path = Routing;
+			sourceTree = "<group>";
+		};
 		B01BEBBA1F60732C002BF11C = {
 			isa = PBXGroup;
 			children = (
@@ -552,6 +571,7 @@
 				B05690E51F60AB7200C02C1B /* ViewModelType.swift */,
 				B05690EB1F60ADFD00C02C1B /* NewsViewModel.swift */,
 				B05690ED1F60B19800C02C1B /* NewsItemViewModel.swift */,
+				B00341F41F6132B900DA72D5 /* NewsContentViewModel.swift */,
 				B01BEC111F608858002BF11C /* ViewModel.h */,
 				B01BEC121F608858002BF11C /* Info.plist */,
 				B05690EF1F60B36500C02C1B /* Utility */,
@@ -596,6 +616,7 @@
 				B05690F81F60B51A00C02C1B /* NewsManager */,
 				B01D91431F608D070080B755 /* Network */,
 				B01D91441F608D070080B755 /* Storage */,
+				B00341F61F613BF800DA72D5 /* Routing */,
 				B01BEC551F608872002BF11C /* Services.h */,
 				B01BEC561F608872002BF11C /* Info.plist */,
 			);
@@ -630,6 +651,7 @@
 				B00341DF1F60ECEB00DA72D5 /* TinkoffModel.xcdatamodel */,
 				B00341D81F60EBAB00DA72D5 /* CoreDataStack.swift */,
 				B00341EA1F60EF7800DA72D5 /* StorageProvider.swift */,
+				B003420D1F61756700DA72D5 /* NewsStorageProvider.swift */,
 				B00341EC1F60F0DB00DA72D5 /* CoreDataRepresentable.swift */,
 			);
 			path = Storage;
@@ -648,6 +670,7 @@
 			children = (
 				B05690E91F60ADC600C02C1B /* NewsController.swift */,
 				B05690FD1F60BAB800C02C1B /* NewsTableViewCell.swift */,
+				B00341F21F61318500DA72D5 /* NewsContentController.swift */,
 			);
 			path = News;
 			sourceTree = "<group>";
@@ -1120,7 +1143,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/Cadmium/Cadmium.framework",
@@ -1134,7 +1156,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cadmium.framework",
@@ -1156,7 +1177,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 				"${BUILT_PRODUCTS_DIR}/Then/Then.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireObjectMapper/AlamofireObjectMapper.framework",
@@ -1169,7 +1189,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Then.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireObjectMapper.framework",
@@ -1377,7 +1396,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxBlocking/RxBlocking.framework",
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1386,7 +1404,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxBlocking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1481,7 +1498,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1491,7 +1507,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1559,7 +1574,6 @@
 				"${BUILT_PRODUCTS_DIR}/RxTest/RxTest.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
 				"${BUILT_PRODUCTS_DIR}/Swinject/Swinject.framework",
-				"${BUILT_PRODUCTS_DIR}/SwinjectStoryboard/SwinjectStoryboard.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -1569,7 +1583,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxTest.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Swinject.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwinjectStoryboard.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -1648,6 +1661,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B00341F31F61318500DA72D5 /* NewsContentController.swift in Sources */,
 				B05690EA1F60ADC600C02C1B /* NewsController.swift in Sources */,
 				B01D91591F60906E0080B755 /* ViewAssembly.swift in Sources */,
 				B00341CD1F60D15100DA72D5 /* UITableView+RxNextPage.swift in Sources */,
@@ -1669,6 +1683,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B05690F41F60B36500C02C1B /* ActivityIndicator.swift in Sources */,
+				B00341F51F6132B900DA72D5 /* NewsContentViewModel.swift in Sources */,
 				B05690E61F60AB7200C02C1B /* ViewModelType.swift in Sources */,
 				B06680211F60C3E900863533 /* ViewModelAssembly.swift in Sources */,
 				B05690EE1F60B19800C02C1B /* NewsItemViewModel.swift in Sources */,
@@ -1708,11 +1723,14 @@
 			files = (
 				B00341EB1F60EF7800DA72D5 /* StorageProvider.swift in Sources */,
 				B05690FA1F60B52100C02C1B /* NewsManager.swift in Sources */,
+				B00341F81F613C0200DA72D5 /* RouterType.swift in Sources */,
 				B05690FC1F60B53600C02C1B /* NewsManagerType.swift in Sources */,
 				B00341E41F60ECEB00DA72D5 /* TinkoffModel.xcdatamodel in Sources */,
 				B00341CF1F60D8DD00DA72D5 /* Network.swift in Sources */,
 				B00341D91F60EBAB00DA72D5 /* CoreDataStack.swift in Sources */,
+				B003420E1F61756700DA72D5 /* NewsStorageProvider.swift in Sources */,
 				B00341D51F60DBEB00DA72D5 /* NewsItem+Mapping.swift in Sources */,
+				B00341FA1F613C7300DA72D5 /* Router.swift in Sources */,
 				B00341ED1F60F0DB00DA72D5 /* CoreDataRepresentable.swift in Sources */,
 				B00341D31F60DAEA00DA72D5 /* NewsNetwork.swift in Sources */,
 				B00341EF1F60F1D700DA72D5 /* CDNews+Ext.swift in Sources */,

@@ -19,5 +19,7 @@ extension CDNews {
     @NSManaged public var id: String?
     @NSManaged public var title: String?
     @NSManaged public var published: Int64
+    @NSManaged public var content: String?
+    @NSManaged public var viewedCount: Int16
 
 }

@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Services
+import Swinject
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        let window = UIWindow(frame: UIScreen.main.bounds)
+        window.backgroundColor = UIColor.white
+        window.makeKeyAndVisible()
+        self.window = window
+        
+        let router = appAssembly.resolver.resolve(RouterType.self)!
+        router.openRoute(route: .newsFeed, type: .asRootWith(window: window))
+        
         return true
     }
 

@@ -14,8 +14,11 @@ extension NewsItem: ImmutableMappable {
     
     // JSON -> Object
     public init(map: Map) throws {
-        id = try map.value("id")
-        title = try map.value("text")
-        published = try map.value("publicationDate.milliseconds")
+        print(map.JSON)
+        id = (try? map.value("id")) ?? ((try? map.value("title.id")) ?? "")
+        title = (try? map.value("text")) ?? ((try? map.value("title.text")) ?? "")
+        published = (try? map.value("publicationDate.milliseconds")) ?? ((try? map.value("title.publicationDate.milliseconds")) ?? 0)
+        content = try? map.value("content")
+        viewedCount = 0
     }
 }

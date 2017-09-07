@@ -8,7 +8,7 @@
 
 import Foundation
 import Swinject
-import SwinjectStoryboard
+//import SwinjectStoryboard
 import Then
 import Services
 import View
@@ -27,11 +27,18 @@ class ApplicationAssembly {
 }
 let appAssembly = ApplicationAssembly()
 
+/*
 extension SwinjectStoryboard {
     @objc class func setup() {
+        defaultContainer.storyboardInitCompleted(UINavigationController.self) { r, c in
+        }
         defaultContainer.storyboardInitCompleted(NewsController.self) { r, c in
-
             c.viewModel = appAssembly.resolver.resolve(NewsViewModel.self)!
         }
+        
+//        defaultContainer.storyboardInitCompleted(NewsController.self) { r, c in
+//            c.viewModel = appAssembly.resolver.resolve(NewsViewModel.self)!
+//        }
     }
 }
+*/

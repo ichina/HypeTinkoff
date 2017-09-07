@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import Model
+
 class NewsNetwork {
     private let network: Network<NewsItem>
     private let pageSize = 20
@@ -21,6 +22,10 @@ class NewsNetwork {
             "first" : String(page*pageSize),
             "last" : String((page+1)*pageSize)
             ])
+    }
+    
+    public func fetchNews(by id: String) -> Observable<NewsItem> {
+        return network.getItem("news_content", itemId:id)
     }
 
 }
